@@ -1,47 +1,7 @@
 #include "Fraction.h"
 
 Fraction::Fraction() : Fraction(1, 5) {}
-//Fraction::Fraction(double num)
-//{
-//	cout << "DROP \n";
-//	if (num == 0)
-//	{
-//		throw "Ноль не допустимое значение";
-//	}
-//	int celoe;
-//	double drobnoe;
-//	celoe = num;
-//	drobnoe = num - celoe;
-//	
-//	int kol = 10;
-//	int temp = drobnoe;
-//	int j = 0;	
-//	cout << "celoe = " << celoe << "\n";
-//	cout << "temp = " << temp << "\n";
-//	cout << "drobnoe = " << drobnoe << "\n";
-//	cout << "kol = " << kol << "\n";
-//	//cout << "uslovie = " << (drobnoe * kol - temp * kol) << "\n";
-//	cout << "uslovie = " << (drobnoe * kol) << " - " << (temp * kol) << "\n";
-//	cout << "j = " << j << "\n";
-//	while (drobnoe - temp != 0)
-//	{
-//		//drobnoe *= kol;
-//		
-//			
-//		temp = drobnoe * kol;
-//		drobnoe = drobnoe * kol;
-//		cout << "temp = " << temp << "\n";
-//		j++;
-//		cout << "uslovie = " << (drobnoe * kol) << " - " << (temp * kol) << "\n";
-//		system("pause");
-//	}
-//	cout << "j = " << j << "\n";
-//	cout << "kol = " << kol << "\n";
-//	ches = kol * celoe + drobnoe;
-//	cout << "ches = " << (kol * celoe + drobnoe) << "\n";
-//	znam = kol;
-//	cout << "znam = " << kol << "\n";
-//}
+
 Fraction::Fraction(int ches, int znam)
 {
 	SetChes(ches);

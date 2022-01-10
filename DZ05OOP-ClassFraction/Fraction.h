@@ -8,7 +8,6 @@ class Fraction
 
 public:
 	Fraction();
-	//Fraction(double num);
 	Fraction(int ches, int znam);
 	Fraction(const Fraction& original);
 
@@ -19,8 +18,6 @@ public:
 	void ShowFraction();
 	double Decimal();
 	void Shrink();
-
-	//Fraction operator + (const Fraction& one, const Fraction& two);
 };
 
 Fraction operator + (const Fraction& one, const Fraction& two); // перезагрузка сложения дробей
