@@ -21,7 +21,7 @@ void Fraction::SetZnam(int znam)
 {
 	if (znam == 0)
 	{
-		throw "Деление на ноль запрещено";
+		throw "Division by zero is not allowed";
 	}
 	this->znam = znam;
 }
@@ -61,40 +61,40 @@ void Fraction::Shrink()
 Fraction operator + (const Fraction& one, const Fraction& two)
 {
 	Fraction result;
-	result.SetChes(one.GetChes() * two.GetZnam() + two.GetChes() * one.GetZnam());
-	result.SetZnam(one.GetZnam() * two.GetZnam());
+	result.SetChes(one.ches * two.znam + two.ches * one.znam);
+	result.SetZnam(one.znam * two.znam);
 	return result;
 }
 Fraction operator - (const Fraction& one, const Fraction& two)
 {
 	Fraction result;
-	result.SetChes(one.GetChes() * two.GetZnam() - two.GetChes() * one.GetZnam());
-	result.SetZnam(one.GetZnam() * two.GetZnam());
+	result.SetChes(one.ches * two.znam - two.ches * one.znam);
+	result.SetZnam(one.znam * two.znam);
 	return result;
 }
 Fraction operator * (const Fraction& one, const Fraction& two)
 {
 	Fraction result;
-	result.SetChes(one.GetChes() * two.GetChes());
-	result.SetZnam(one.GetZnam() * two.GetZnam());
+	result.SetChes(one.ches * two.ches);
+	result.SetZnam(one.znam * two.znam);
 	return result;
 }
 Fraction operator / (const Fraction& one, const Fraction& two)
 {
 	Fraction result;
-	result.SetChes(one.GetChes() * two.GetZnam());
-	result.SetZnam(one.GetZnam() * two.GetChes());
+	result.SetChes(one.ches * two.znam);
+	result.SetZnam(one.znam * two.ches);
 	return result;
 }
 bool operator > (const Fraction& one, const Fraction& two)
 {
-	return (one.GetChes() * two.GetZnam() > two.GetChes() * one.GetZnam());
+	return (one.ches * two.znam > two.ches * one.znam);
 }
 bool operator < (const Fraction& one, const Fraction& two)
 {
-	return (one.GetChes() * two.GetZnam() < two.GetChes() * one.GetZnam());
+	return (one.ches * two.znam < two.ches * one.znam);
 }
 bool operator == (const Fraction& one, const Fraction& two)
 {
-	return (one.GetChes() * two.GetZnam() == two.GetChes() * one.GetZnam());
+	return (one.ches * two.znam == two.ches * one.znam);
 }

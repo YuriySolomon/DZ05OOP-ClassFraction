@@ -18,12 +18,20 @@ public:
 	void ShowFraction();
 	double Decimal();
 	void Shrink();
+
+	friend Fraction operator + (const Fraction& one, const Fraction& two);
+	friend Fraction operator - (const Fraction& one, const Fraction& two);
+	friend Fraction operator * (const Fraction& one, const Fraction& two);
+	friend Fraction operator / (const Fraction& one, const Fraction& two);
+	friend bool operator > (const Fraction& one, const Fraction& two);
+	friend bool operator < (const Fraction& one, const Fraction& two);
+	friend bool operator == (const Fraction& one, const Fraction& two);
 };
 
-Fraction operator + (const Fraction& one, const Fraction& two); // перезагрузка сложения дробей
-Fraction operator - (const Fraction& one, const Fraction& two); // перезагрузка вычитания дробей
-Fraction operator * (const Fraction& one, const Fraction& two); // перезагрузка умножение дробей
-Fraction operator / (const Fraction& one, const Fraction& two); // перезагрузка деление дробей
-bool operator > (const Fraction& one, const Fraction& two); // перезагрузка операции больше
-bool operator < (const Fraction& one, const Fraction& two); // перезагрузка операции меньше
-bool operator == (const Fraction& one, const Fraction& two); // перезагрузка операции равно
+Fraction operator + (const Fraction& one, const Fraction& two); // peregruzka slozheniya drobi
+Fraction operator - (const Fraction& one, const Fraction& two); // peregruzka vychitaniya drobey
+Fraction operator * (const Fraction& one, const Fraction& two); // peregruzka umnozheniye drobey
+Fraction operator / (const Fraction& one, const Fraction& two); // perezagruzka deleniye drobey
+bool operator > (const Fraction& one, const Fraction& two); // peregruzka operatsii bol'she
+bool operator < (const Fraction& one, const Fraction& two); // peregruzka operatsii men'she
+bool operator == (const Fraction& one, const Fraction& two); // peregruzka operatsii ravno
